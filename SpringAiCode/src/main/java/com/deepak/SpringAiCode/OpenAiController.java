@@ -26,7 +26,9 @@ public class OpenAiController
             String response = chatModel.call(message);
             logger.info("Generated response: {}", response);
             return response;
-        } catch (Exception e) {
+        }
+           catch (Exception e)
+        {
             logger.error("Error processing request: ", e);
             throw new RuntimeException("Error processing request: " + e.getMessage(), e);
         }
